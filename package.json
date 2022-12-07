@@ -1,0 +1,21 @@
+{
+  "name": "get_variable_data_from_source_code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "main": "getVars.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://andersoncampolina1@dev.azure.com/andersoncampolina1/get_variable_data_from_source_code/_git/get_variable_data_from_source_code"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "fs": "^0.0.1-security"
+  }
+}
