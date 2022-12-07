@@ -2,18 +2,21 @@ import readFile from "./readFile.js";
 
 async function main() {
 
-    let fileData = await readFile("./interact.js");
+    let fileData = await readFile("./interactContract.js");
     fileData = fileData.split(" ");
-
-    const nomeVarArr = []
+    // console.table(fileData);
+    const varList = [];
     fileData.map((element, i) =>  {
-        if (element === "const" || element === "let" || element === "var") {
-            nomeVarArr.push(fileData[i+1])
-        }
+        if (element === "=") {
+            // varObj[(i-1)] = fileData[i-1];
+            const varObj = new Object();
+            varObj.index = i;
+            varObj.name = fileData[i-1]; 
+            varList.push(varObj);
+            
+        }        
     })
-
-    console.log(nomeVarArr)
-    
+    console.log(varList);    
 }
 
-main()
+main();
